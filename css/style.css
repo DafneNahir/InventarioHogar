@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Montserrat, Consolas, 'Courier New', monospace";
     background-color: #e8f5e9;
     color: #2e7d32;
     text-align: center;
@@ -69,3 +69,32 @@ li {
     padding: 5px 10px;
 }
 
+h2 {
+    font-family: "Montserrat, Consolas, 'Courier New', monospace";
+    text-align: center;
+    font-size: 2.5em;
+    justify-items: center;
+    margin: 0;
+    font-weight: 200;
+}
+h2:hover {
+    font-size: 3em;
+}
+
+footer {   
+    display: grid;
+    grid-auto-flow: row;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    font-size: 0.6em;
+    width: 100%;
+    margin-bottom: 10px;
+    align-content: center;
+    justify-content: center;
+    padding: 0;
+} 
+
+p{
+    margin: 0;
+}
