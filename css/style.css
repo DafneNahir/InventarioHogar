@@ -1,0 +1,71 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+#agregarProducto {
+    margin-bottom: 25px;
+}
+
+input {
+    padding: 10px;
+    border: 2px solid #a5d6a7;
+    border-radius: 10px;
+    outline: none;
+    width: 20vw;
+}
+
+button {
+    background-color: #81c784;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #66bb6a;
+}
+
+.eliminar {
+    background-color: #a5d6a7;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 400px;
+    margin: auto;
+}
+
+li {
+    background-color: #c8e6c9;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nombre {
+    font-weight: 600;
+}
+
+.controles button {
+    margin: 0 5px;
+    padding: 5px 10px;
+}
+
