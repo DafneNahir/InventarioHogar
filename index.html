@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Inventario de Hogar | Aplicación simple para registrar productos, sumar, restar o eliminar del inventario.">
-    <meta name="keywords" content="inventario, hogar, productos, stock, limpieza, alimentos, cocina">
-    <meta name="author" content="Dafne LM">
-    <meta name="owner" content="Dafne LM">
-    
     <title>Inventario de Hogar</title>
 
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Toastify -->
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- Scripts -->
+    <script defer src="./js/storage.js"></script>
+    <script defer src="./js/resumen.js"></script>
     <script defer src="./js/main.js"></script>
 </head>
 
@@ -18,13 +21,68 @@
     <header>
         <h1>Inventario de Hogar</h1>
     </header>
-    
+
     <section id="agregarProducto">
-        <input type="text" id="nombreProducto" placeholder="Ingresá un producto">
-        <button id="btnAgregar">Agregar</button>
+        <!-- Primera línea: Buscador -->
+        <div class="fila-principal">
+            <input type="text" id="buscarProducto" placeholder="Buscar producto...">
+        </div>
+        
+        <!-- Segunda línea: Input producto + categorías + botón agregar -->
+        <div class="fila-secundaria">
+            <input type="text" id="nombreProducto" placeholder="Ingresá un producto">
+            <select id="categoriaProducto"></select>
+            <button id="btnNuevaCategoria">+ Categoría</button>
+            <button id="btnGestionarCategorias" title="Gestionar categorías">⚙️</button>
+            <button id="btnAgregar">Agregar</button>
+        </div>
+        
+        <!-- modal agregar categoria -->
+        <div id="modalCategoria" class="modal">
+            <div class="modal-content">
+                <h3>Nueva Categoría</h3>
+                <input type="text" id="nuevaCategoriaInput" placeholder="Nombre de categoría">
+                <div class="modal-buttons">
+                    <button id="guardarCategoriaBtn">Guardar</button>
+                    <button id="cerrarModalBtn">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- modal gestionar categorias -->
+        <div id="modalGestionarCategorias" class="modal">
+            <div class="modal-content modal-gestionar">
+                <h3>Gestionar Categorías</h3>
+                <div id="listaCategoriasGestionar"></div>
+                <div class="modal-buttons">
+                    <button id="cerrarGestionarBtn">Cerrar</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- modal confirmar eliminación -->
+        <div id="modalConfirmarEliminar" class="modal">
+            <div class="modal-content">
+                <h3>Confirmar Eliminación</h3>
+                <p id="mensajeConfirmarEliminar"></p>
+                <div class="modal-buttons">
+                    <button id="confirmarEliminarBtn">Eliminar</button>
+                    <button id="cancelarEliminarBtn">Cancelar</button>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <ul id="listaInventario"></ul>
+    <!-- categorias acordeón -->
+    <div id="categoriasContainer"></div>
+    
+    <!-- Botón resumen diario al final -->
+    <div class="fila-resumen">
+        <button id="btnResumen">Resumen diario</button>
+    </div>
+
+    <!-- resumen -->
+    <div id="resumen"></div>
 
     <footer>
         <h2 class="foo">Dafne LM</h2>
