@@ -11,7 +11,6 @@ document.getElementById("btnResumen").addEventListener("click", () => {
             return;
         }
 
-        // Agrupar por categoría
         const resumenPorCategoria = inventario.reduce((acc, prod) => {
             if (!acc[prod.categoria]) {
                 acc[prod.categoria] = {
@@ -27,7 +26,6 @@ document.getElementById("btnResumen").addEventListener("click", () => {
             return acc;
         }, {});
 
-        // Generar HTML del resumen
         let html = `
             <div class="resumen-container">
                 <h3>Resumen Diario</h3>
@@ -54,8 +52,6 @@ document.getElementById("btnResumen").addEventListener("click", () => {
         `;
 
         document.getElementById("resumen").innerHTML = html;
-        
-        // Agregar evento al botón de cerrar
         document.getElementById("cerrarResumenBtn").addEventListener("click", () => {
             document.getElementById("resumen").innerHTML = "";
         });
@@ -72,6 +68,5 @@ document.getElementById("btnResumen").addEventListener("click", () => {
             style: { background: "#E53935" } 
         }).showToast();
     } finally {
-        // Limpiar cualquier estado temporal si es necesario
     }
 });

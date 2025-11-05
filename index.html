@@ -7,11 +7,9 @@
 
     <link rel="stylesheet" href="./css/style.css">
 
-    <!-- Toastify -->
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
-    <!-- Scripts -->
     <script defer src="./js/storage.js"></script>
     <script defer src="./js/resumen.js"></script>
     <script defer src="./js/main.js"></script>
@@ -23,12 +21,10 @@
     </header>
 
     <section id="agregarProducto">
-        <!-- Primera línea: Buscador -->
         <div class="fila-principal">
             <input type="text" id="buscarProducto" placeholder="Buscar producto...">
         </div>
         
-        <!-- Segunda línea: Input producto + categorías + botón agregar -->
         <div class="fila-secundaria">
             <input type="text" id="nombreProducto" placeholder="Ingresá un producto">
             <select id="categoriaProducto"></select>
@@ -37,7 +33,6 @@
             <button id="btnAgregar">Agregar</button>
         </div>
         
-        <!-- modal agregar categoria -->
         <div id="modalCategoria" class="modal">
             <div class="modal-content">
                 <h3>Nueva Categoría</h3>
@@ -49,7 +44,6 @@
             </div>
         </div>
         
-        <!-- modal gestionar categorias -->
         <div id="modalGestionarCategorias" class="modal">
             <div class="modal-content modal-gestionar">
                 <h3>Gestionar Categorías</h3>
@@ -60,7 +54,6 @@
             </div>
         </div>
         
-        <!-- modal confirmar eliminación -->
         <div id="modalConfirmarEliminar" class="modal">
             <div class="modal-content">
                 <h3>Confirmar Eliminación</h3>
@@ -73,15 +66,12 @@
         </div>
     </section>
 
-    <!-- categorias acordeón -->
     <div id="categoriasContainer"></div>
     
-    <!-- Botón resumen diario al final -->
     <div class="fila-resumen">
         <button id="btnResumen">Resumen diario</button>
     </div>
 
-    <!-- resumen -->
     <div id="resumen"></div>
 
     <footer>
